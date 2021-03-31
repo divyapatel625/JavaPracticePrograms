@@ -1,0 +1,19 @@
+/**
+*Sum of an integer Array element in java.
+*/
+
+public class Main {
+  public static void main(String[] args) {
+
+int[] a = {5, 4, 3, 2, 1};
+
+
+int sum = 0;
+ for(int k=0; k<a.length; k++){
+   sum = sum+ a[k];
+
+}
+  System.out.print( sum +" ");
+ }
+  
+}
