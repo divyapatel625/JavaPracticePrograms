@@ -1,0 +1,30 @@
+import java.io.*;
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+          
+        char[] ch = s.toCharArray();
+        
+        int i=0;
+        String temp = "";
+        int res = 0;
+        while(true){
+        if(i==0) 
+            temp = temp.concat(ch[i]+"");
+            
+            if(ch[i]!=(temp.charAt(0))){
+                temp = temp.concat(ch[i]+"");
+            } 
+            
+            else if(ch[i]==temp.charAt(0)){
+                 res = temp.length();
+            }
+            
+            i++;
+            
+            if(i==s.length()){
+                break;
+            }
+        }
+        return res;
+    }
+}
