@@ -1,0 +1,47 @@
+import java.time.LocalTime;
+public class HelloWorld{
+
+     public static void main(String []args){
+         
+        int[] arr = {4,3,2,1,4};
+        
+        int left_val = 0;
+        int right_val = 0;
+        int kl = 0;
+        int kr = 0;
+        int maxl = 0;
+        int maxr = 0;
+        int min = 0;
+        int sum = 0;
+        for(int i=1; i<arr.length-1; i++){
+            kl = i-1;
+            kr = i+1;
+           while(kl>=0){
+               if(maxl<arr[kl]){
+                  maxl = arr[kl];
+                 
+                 if(kl>0) kl--;
+                  }
+           }
+           System.out.println("kl"+kl);
+            
+            while(kr<arr.length-1){
+                 if(maxr<arr[kr]){
+                  maxr = arr[kr];
+                  kr++;
+               }
+            }
+            System.out.println("kr"+kr); 
+     if(maxl<maxr)
+         min = maxl;
+     else 
+         min = maxr;
+     
+       sum = sum +  min;
+       System.out.println(sum); 
+        }
+
+System.out.println("Sum "+ sum);     
+  System.out.println(java.time.LocalTime.now()); 
+     }
+}
